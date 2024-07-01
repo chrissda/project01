@@ -1,12 +1,11 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-
+import { Link } from "react-scroll";
+import { FaTimes } from "react-icons/fa";
+import { CiMenuFries } from "react-icons/ci";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
-  const handleMenu = () => {
-    setMenu(!menu);
-  }
+  const handleMenu = () => setMenu(!menu);
 
 
   const animation = () => {
@@ -31,7 +30,7 @@ const Navbar = () => {
 
     </div>
   }
-
+  
   return (
     <nav className="bg-indigo-900">
       <div className="h-10vh flex justify-between z-50 text-white lg:py-5 px-20 py-4">
@@ -60,10 +59,10 @@ const Navbar = () => {
           </div>
         </div>
         <div>
-          {menu && animation}
+          { menu && animation }
         </div>
-        <button className="block sm:hidden transition" onClick={handleMenu}>
-          <i className="fa-sharp fa-solid fa-bars"></i>
+        <button className="block sm:hidden " onClick={handleMenu}>
+          { menu ? <FaTimes /> : <CiMenuFries /> }
         </button>
       </div>
     </nav>
