@@ -1,17 +1,19 @@
-import HomeN from "./Views/HomeN";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import AllProductsView from "./Views/AllProductsView";
 import Navbar from "./components/Navbar";
 
 const App = () => {
   return (
-    <div>
-      {/* <HomeN /> */}
-      {/* <NavbarN /> */}
-      App
-    </div>
-    
-  )
-}
-export default App
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<AllProductsView />} />
+        </Routes>
+      </Router>
+    );
+};
+
+export default App;
 
 /*
 import { useState } from 'react'
