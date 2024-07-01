@@ -1,8 +1,14 @@
+import HomeN from "./Views/HomeN";
+import Navbar from "./components/Navbar";
+
 const App = () => {
   return (
     <div>
-      App  
+      {/* <HomeN /> */}
+      {/* <NavbarN /> */}
+      App
     </div>
+    
   )
 }
 export default App
