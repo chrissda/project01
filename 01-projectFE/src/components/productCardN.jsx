@@ -1,3 +1,4 @@
+//Componente productCardN
 const productCardN = () => {
     return(
         <div className="bg-indigo-200 p-4 rounded-md">
