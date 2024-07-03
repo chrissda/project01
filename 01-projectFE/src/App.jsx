@@ -2,14 +2,16 @@ import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import AllProductsView from "./Views/AllProductsView";
 // import Navbar from "./components/Navbar";
 import NavbarN from "./components/NavbarN";
+import Nav from "./components/Nav";
 
 const App = () => {
   return (
       <Router>
+        {/* <Nav /> */}
         <NavbarN />
         {/* <Navbar /> */}
         <Routes>
-          {/* <Route path="/" element={<AllProductsView />} /> */}
+          <Route path="/" element={<AllProductsView />} />
         </Routes>
       </Router>
     );
