@@ -3,6 +3,7 @@ import { Link } from "react-scroll";
 import { FaTimes } from "react-icons/fa";
 import { CiMenuFries } from "react-icons/ci";
 
+
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
   const handleMenu = () => setMenu(!menu);

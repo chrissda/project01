@@ -1,39 +1,43 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 const BtnHome = () => {
-	return {
-		
-	}
-}
+	return (
+		<>
+			
+		</>
+	);
+};
 
 const NavbarN = () => {
-
- 
-
-  return (
+	
+	return (
     <>
-  	  <div className="bg-cyan-600 h-20">
-				{/* <div className="sticky top-0 z-[20] mx-auto flex w-1/4 items-center justify-between border-gray-500 border-b-0 p-6"> */}
-				<div className="relative flex p-4 items-center justify-between">
-					<button className="border-2 bg-gray-600 border-orange-500">
-						Inicio
-					</button>
-					<div className="flex w-3/4 justify-end items-center">
-						<div className="mx-2"><NavLink to="/">Inicio</NavLink></div>
-						<div className="mx-2"><NavLink to="/">Productos</NavLink></div>
-						
-					</div>
-					<div className="flex w-1/5 justify-end rounded-sm">
-						<button className="mx-auto rounded rounded-l-lg ">Login</button>
-						<button className="mx-auto rounded rounded-r-lg">Register</button>
-						{/* <div className="mx-2"><NavLink to="/">Login</NavLink></div>
-						<div className="mx-2"><NavLink to="/">Register</NavLink></div> */}
+  	  <div className="grid grid-cols-3 sticky top-0 z-[20] bg-sky-700 h-16 items-center text-white">
+				<div className="flex justify-center">
+					{/* <button className="w-2/4 h-16 text-center text-3xl border-2 bg-sky-700 border-orange-500">
+					 Store
+					</button> */}
+					<div className="text-center text-3xl"><NavLink to="/">Store</NavLink></div>
 				</div>
+				<div className="flex h-16 items-center justify-end gap-4">
+					<div className=" "><NavLink to="/">Inicio</NavLink></div>
+					<div className=" "><NavLink to="/">Productos</NavLink></div>
+					<div className=" "><NavLink to="/">Ingresar</NavLink></div>
+					<div className=" "><NavLink to="/">Registrarse</NavLink></div>
+				</div>
+				<div className="flex justify-center border-r-0 gap-4">
+					<Link className="text-orange-500">
+						<i className="fa-solid fa-cart-shopping"></i>
+					</Link>
+					<div>
+						<button className="bg-indigo-700 hover:outline hover:outline-2 hover:outline-sky-500 rounded-l-lg">Login</button>
+						<button className="bg-indigo-700 hover:outline hover:outline-2 hover:outline-sky-500 rounded-r-lg">Register</button>
+					</div>
 				</div>
 			</div>
     </>
-  )
-}
+  );
+};
 
-export default NavbarN
+export default NavbarN;

@@ -1,4 +1,5 @@
 import ListProductN from "../components/ListProductN";
+//import NavbarN from "../components/NavbarN";
 import useAxios from "../hooks/useAxios";
 
 const AllProductsView = () => {
@@ -8,6 +9,7 @@ const AllProductsView = () => {
 
   return (
     <div>
+      {/* <NavbarN /> */}
       <ListProductN products={data} />      
     </div>
   );
