@@ -12,7 +12,7 @@ const AllProductsView = () => {
 
   return (
     <div>
-      <NavbarN />
+      {/* <NavbarN /> */}
       <div className="w-[80%] m-auto pt-4">
         <CarouselN />
       </div>

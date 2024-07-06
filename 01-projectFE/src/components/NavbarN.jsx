@@ -18,10 +18,10 @@ const NavbarN = () => {
 			{/* div principal del navbar */}
 			<div className="flex w-full flex-wrap sticky top-0 z-[20]">
 				{/* contenedor navbar */}
-				<div className="grid w-full grid-cols-3 bg-gradient-to-r from-cyan-500 to-indigo-600 h-16 items-center text-white">
+				<div className="grid w-full grid-cols-3 bg-gradient-to-r from-cyan-500 to-indigo-600 h-20 items-center text-white hover:bg-gradient-to-bl">
 					{/* Col 1 */}
 					<div className="hidden md:flex justify-center pl-10 pr-20  hover:text-sky-300">
-						<div className="text-center text-3xl font-semibold  hover:text-orange-400">
+						<div className="text-center text-3xl font-semibold  hover:text-orange-400 ease-in duration-300">
 							<NavLink to="/home"><i className="fa-solid fa-hurricane mr-2"></i>Chriss Store</NavLink>
 						</div>
 					</div>
@@ -54,8 +54,8 @@ const NavbarN = () => {
 						</button>
 					</div>
 					{/* renderizado CS */}
-					<div className="absolute left-0 md:hidden flex justify-start pl-10 text-3xl font-semibold hover:text-orange-400">
-						<NavLink to="/"><i className="fa-solid fa-hurricane mr-0.5" to="/"></i>CS</NavLink>
+					<div className="absolute left-0 md:hidden flex justify-start pl-10 text-3xl font-semibold hover:text-orange-400 ease-in duration-300">
+						<NavLink to="/home"><i className="fa-solid fa-hurricane mr-0.5" to="/"></i>CS</NavLink>
 					</div>
 				</div>
 				{BOpen && (

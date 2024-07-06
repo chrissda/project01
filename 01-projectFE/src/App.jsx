@@ -6,14 +6,16 @@ import HomeN from "./Views/HomeN";
 //import CarouselN from "./components/CarouselN";
 import ProductViewN from "./Views/ProductViewN";
 import Contact from "./Views/Contact";
+import NavbarN from "./components/NavbarN";
 
 
 
 const App = () => {
   return (
-      <Router>
+      
+        <Router>
         {/* <HomeN /> */}
-        {/* <NavbarN /> */}
+        <NavbarN />
         {/* <Navbar /> */}
         <Routes>
           <Route path="/" element={<AllProductsView />} />
@@ -23,6 +25,7 @@ const App = () => {
           
         </Routes>
       </Router>
+      
     );
 };
 

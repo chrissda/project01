@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import AllProductsView from "./AllProductsView";
+import { Link, NavLink } from "react-router-dom";
+
 
 let image = "https://firebasestorage.googleapis.com/v0/b/proyecto19-a20d1.appspot.com/o/65d1333d-2260-4229-b5a9-3383fd4062af.jpg?alt=media&token=00c677e6-197f-4bd6-a9a4-833402dba33b";
 
@@ -16,11 +16,11 @@ const Contact = () => {
                 <br class="hidden lg:inline-block" />
               </h1>
               <p class="mb-8 leading-relaxed">Si no te gusta el contenido díselo al Buticito lindo pero también tienes las siguientes opciones:</p>
-              <div class="grid gap-4 grid-cols-2">
-                <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-400 rounded text-lg hover:outline hover:outline-4 hover:outline-green-700">Recomendar</button>
-                <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-400 rounded text-lg hover:outline hover:outline-4 hover:outline-orange-600">Reportar</button>
-                <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-300 rounded text-lg hover:outline hover:outline-4 hover:outline-yellow-400">Destruir</button>
-                <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-500 rounded text-lg hover:outline hover:outline-4 hover:outline-red-700" to={<AllProductsView />}>Mandar GG</button>
+              <div class="grid gap-x-5 gap-y-5 grid-cols-2 ml-5">
+                <button class="text-white bg-indigo-500 border-0 py-3 px-8 focus:outline-none hover:bg-green-400 rounded text-lg hover:outline hover:outline-4 hover:outline-green-700">Commentr</button>
+                <button class="text-white bg-indigo-500 border-0 py-3 px-8 focus:outline-none hover:bg-orange-400 rounded text-lg hover:outline hover:outline-4 hover:outline-orange-600">Report</button>
+                <button class="text-white bg-indigo-500 border-0 py-3 px-8 focus:outline-none hover:bg-yellow-300 rounded text-lg hover:outline hover:outline-4 hover:outline-yellow-400">Isadisasta</button>
+                <NavLink className="text-white bg-indigo-500 border-0 py-3 px-8 focus:outline-none hover:bg-red-500 rounded text-lg hover:outline hover:outline-4 hover:outline-red-700" to="/">Mandar GG</NavLink>
               </div>
             </div>
         </div>
