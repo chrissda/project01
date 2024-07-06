@@ -1,8 +1,12 @@
 //Componente productCardN
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 const ProductCardN = ({ product }) => {
+  // usando contexto para guardar datos al carrito
+  // const { addProductToCart } = useContext(CartContext);
   // props a renderizar 
   const { id, nombre, foto, categoria, descripcion, precio } = product;
 
@@ -24,17 +28,24 @@ const ProductCardN = ({ product }) => {
           </div>
           {/* Texto Card */}
           <div className="p-4"> 
-              <h4 className="text-md font-semibold mb-2 truncate">{nombre}</h4> 
-              <p className="text-sm text-gray-800 mb-2 truncate">{descripcion}</p> 
-              <span className="text-md text-indigo-800">S/.{precio}</span> 
-          </div>
-          <div className="flex justify-center text-white text-center">
-            <button className="px-3 py-1 bg-gray-700 hover:bg-gray-500 rounded-l-lg">
-              Add <i className="fa-solid fa-cart-shopping"></i>
-            </button>
-            <Link className="px-2 py-1 bg-indigo-700 hover:bg-indigo-600 rounded-r-lg">
-              View <i className="fa-regular fa-eye"></i>
-            </Link>
+            <h4 className="text-md font-semibold mb-2 truncate">{nombre}</h4> 
+            <p className="text-sm text-gray-800 mb-2 truncate">{descripcion}</p> 
+            <span className="text-md text-indigo-800">S/.{precio}</span> 
+            <div className="flex justify-center text-white text-center">
+              {/* botones agregar y vista previa producto */}
+              <button 
+                className="px-3 py-1 bg-gray-700 hover:bg-gray-500 rounded-l-lg"
+                // onClick={() => {addProductToCart(product)}}
+              >
+                Add <i className="fa-solid fa-cart-shopping"></i>
+              </button>
+              <Link 
+                className="px-2 py-1 bg-indigo-700 hover:bg-indigo-600 rounded-r-lg"
+                to={`/product/${id}`}
+              >
+                View <i className="fa-regular fa-eye"></i>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

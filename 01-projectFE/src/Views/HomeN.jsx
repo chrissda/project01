@@ -1,17 +1,18 @@
+import { NavLink } from "react-router-dom";
 import AllProductsView from "./AllProductsView";
 
 const HomeN = () => {
   return (
-    <div className="grid grid-cols-1 items-center justify-center">
+    <div className="grid grid-cols-1 items-center justify-center text-center">
       <div className="text-gray-800 text font-semibold text-2xl">
         Bienvenido a Chriss Store
       </div>
-      <button 
+      <NavLink 
         className="bg-orange-600 text-white"
-        onClick={<AllProductsView />}
+        to="/"
       >
         Ir al store
-      </button>
+      </NavLink>
     </div>
   );
 };
