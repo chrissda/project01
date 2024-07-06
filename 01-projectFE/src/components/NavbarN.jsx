@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+//import { Menu, X } from "lucide-react";
 //import { Button } from "react-scroll";
 
 
@@ -50,7 +50,8 @@ const NavbarN = () => {
 							<NavLink className="px-5 py-1 bg-indigo-700 hover:outline hover:outline-2 hover:outline-sky-500 rounded-l-xl ease-in duration-300" to="login">Login</NavLink>
 						</div>
 						<button className="block sm:hidden" onClick={menuBtnNav}>
-							{BOpen ? <X className="size-8" /> : <Menu className="size-8" />}
+							{/* {BOpen ? <X className="size-8" /> : <Menu className="size-8" />} */}
+							{BOpen ? <i class="fa-solid fa-x text-2xl pl-1"></i> : <i class="fa-solid fa-bars text-2xl"></i>}
 						</button>
 					</div>
 					{/* renderizado CS */}
